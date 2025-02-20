@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-container, .result-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group-inline input {
+    width: 48%;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+.result-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.result-container strong {
+    color: #333;
+}
+
+/* Esconde a seção de resultados quando os dados não são enviados */
+.result-container {
+    display: <?php echo ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['nome'])) ? 'block' : 'none'; ?>;
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+
+       <form action="Formulario%20de%20Cadastro.php" method="post">
+
+  <div class="form-container">
+    <h1>Formulário de Cadastro</h1>
+
+    <div class="nome">
+      <label for="idnome">Nome Completo:</label>
+      <input type="text" name="nome" placeholder="digite seu nome" id="idnome">
+    </div>
+
+    <div class="email">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <div class="telefone">
+      <label for="telefone">Número de Telefone:</label>
+      <input type="tel" id="telefone" name="telefone">
+    </div>
+
+    <div class="form-group">
+      <label>Endereço Completo:</label>
+      <div class="form-group-inline">
+        <input type="text" id="rua" name="rua" placeholder="Rua">
+        <input type="text" id="complemento" name="complemento" placeholder="Complemento">
+      </div>
+
+      <div class="form-group-inline">
+        <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+        <input type="text" id="estado" name="estado" placeholder="Estado">
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="cep" name="cep" placeholder="CEP" value="<?php echo $cep; ?>" required>
+      </div>
+
+      <form name="post" action="./?post=true" method="post" enctype="ultipart/form-data">m
+        <p style="margin-bottom: 10px; text-align: right"><a href="./" title="Atualizar">Atualizar</a></p>
+        <input type="file" name="file"/>
+        <button>Enviar</button>
+      </form>
+
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn-submit" value="Enviar">
+    </div>
+
+</form>
+</body>
+</html>
